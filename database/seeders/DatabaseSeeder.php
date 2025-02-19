@@ -26,6 +26,6 @@ class DatabaseSeeder extends Seeder
         // ->count(10)
         // ->create();
 
-        Post::factory(100)->create();
+        Post::factory(30)->create();
     }
 }

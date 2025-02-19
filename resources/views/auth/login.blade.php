@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
-    <form action="{{ route('login') }}" method="POST">
-        @csrf
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required> <br>
+    <div class="container">
+        <div class="d-flex">
+            <form action="{{ route('login') }}" method="POST" class="form">
+                <div class="form-title">Login</div>
+                @csrf
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required> <br>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required> <br>
-            <button type="submit">Login</button>
-    </form>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" required> <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

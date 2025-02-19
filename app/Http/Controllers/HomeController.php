@@ -10,8 +10,9 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::with('posts')
+        ->take(2)
         ->get();
-        
+
         return view("home.index", compact("users"));
     }
 }
